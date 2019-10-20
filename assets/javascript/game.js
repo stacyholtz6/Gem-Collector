@@ -10,55 +10,86 @@ $(document).ready(function () {
   var pinkNumber = "";
   var yellowNumber = "";
 
+  var blue = $("#blue");
+  var green = $("#green");
+  var pink = $("#pink");
+  var yellow = $("#yellow");
+
+  // blank array for gem values?
+  // var gemValues = [];
+
+
+  // generate random number
+  targetScore = randomTargetScore();
+  // and then put random number into target score div
+  $("#target-score").text(targetScore);
+  console.log("target " + targetScore);
 
   // generate random numbers when a gem is clicked 1-12 hidden value
-  $("#blue").on("click", function () {
-    blueNumber = Math.floor(Math.random() * 12) + 1;
-    $("#current-score").prepend(currentScore);
+  blueNumber = randomGemNumber();
+  blue.on("click", function () {
+    $("#current-score").text(blueNumber);
     console.log("blue " + blueNumber);
   });
 
-  $("#green").on("click", function () {
-    greenNumber = Math.floor(Math.random() * 12) + 1;
-    $("#current-score").prepend(currentScore);
+  greenNumber = randomGemNumber();
+  green.on("click", function () {
+    $("#current-score").text(greenNumber);
     console.log("green " + greenNumber);
   });
 
-  $("#pink").on("click", function () {
+  pinkNumber = randomGemNumber();
+  pink.on("click", function () {
     pinkNumber = Math.floor(Math.random() * 12) + 1;
-    $("#current-score").prepend(currentScore);
+    $("#current-score").text(pinkNumber);
     console.log("pink " + pinkNumber);
   });
 
-  $("#yellow").on("click", function () {
-    yellowNumber = Math.floor(Math.random() * 12) + 1;
-    $("#current-score").prepend(currentScore);
+  yellowNumber = randomGemNumber();
+  yellow.on("click", function () {
+    $("#current-score").text(yellowNumber);
     console.log("yellow " + yellowNumber);
   });
 
-  // generate random number when the game starts 19-120 
-  $("#random-button").on("click", function () {
-    // create the random number 
-    targetScore = Math.floor(Math.random() * 119) + 19;
-    // and then put random number into target score div
-    $("#target-score").prepend(targetScore);
-    console.log("target " + targetScore);
-  })
-
-
-
-  // add random numbers when a gem is clicked - 
 
   // win if your score equals random number -- score checker
+  if (currentScore === targetScore) {
+    alert("You win!");
+    wins++;
+  }
+  else if (currentScore >= targetScore) {
+    alert("You lose!");
+    losses++;
+  }
 
+  // function for random numbers
 
-  // lose if your score is not equal to random number - score checcker
+  function randomGemNumber() {
+    return Math.floor(Math.random() * 12) + 1;
+  };
 
-  // values are hidden until you click on it
-
-  // values change when game restarts
+  function randomTargetScore() {
+    return Math.floor(Math.random() * 119) + 19;
+  };
 
   // reset function
+  function reset() {
+
+  };
+  // HOW DO I ADD THEM ALL TOGETHER?????
+
+  // change string numbers to integers
+  // blueNumber = parseInt(blueNumber);
+  // greenNumber = parseInt(greenNumber);
+  // yellowNumber = parseInt(yellowNumber);
+  // pinkNumber = parseInt(pinkNumber);
+
+  // add the random numbers together
+
+  // display number each time it is added to
+
+
+  // create the random number 
 
 
 
