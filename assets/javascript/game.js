@@ -53,6 +53,7 @@ $(document).ready(function () {
     $("#current-score").text(currentScore);
     win();
     console.log("yellow " + yellowNumber);
+
   });
 
   function win() {

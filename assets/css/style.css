@@ -1,0 +1,43 @@
+body {
+  background: url("../images/gembg.jpg");
+}
+
+.jumbotron {
+  background: rgb(51, 173, 255);
+  padding: 20px;
+}
+
+.gemBox {
+  background-color: white;
+  padding: 15px;
+}
+
+.score {
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.rules {
+  margin: 20px;
+}
+
+img:hover {
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg); 
+  transform: rotate(180deg); 
+}
+
+a:hover {
+  color: #e600e6;
+}
+
+.fa-github {
+  font-size: 2rem;
+}
+
+.name,
+.fa-github,
+.copy, .navbar {
+  color: rgb(227,227,227);
+}
+
