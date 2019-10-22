@@ -7,6 +7,10 @@ body {
   padding: 20px;
 }
 
+.btn-primary {
+  background: rgb(51, 173, 255);
+}
+
 .gemBox {
   background-color: white;
   padding: 15px;
@@ -41,3 +45,6 @@ a:hover {
   color: rgb(227,227,227);
 }
 
+nav {
+  background: rgb(51, 173, 255);
+}

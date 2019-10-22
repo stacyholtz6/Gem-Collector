@@ -22,39 +22,44 @@ $(document).ready(function () {
   $("#target-score").text(targetScore);
   console.log("target " + targetScore);
 
-  // generate random gem numbers when a gem is clicked 1-12 hidden value
+
   blueNumber = randomGemNumber();
-  blue.on("click", function () {
+  blue.on("click", blueGem);
+  greenNumber = randomGemNumber();
+  green.on("click", greenGem);
+  pinkNumber = randomGemNumber();
+  pink.on("click", pinkGem);
+  yellowNumber = randomGemNumber();
+  yellow.on("click", yellowGem);
+
+
+  function blueGem() {
     currentScore = currentScore + blueNumber;
     $("#current-score").text(currentScore);
     win();
     console.log("blue " + blueNumber);
-  });
+  }
 
-  greenNumber = randomGemNumber();
-  green.on("click", function () {
+  function greenGem() {
     currentScore = currentScore + greenNumber;
     $("#current-score").text(currentScore);
     win();
     console.log("green " + greenNumber);
-  });
+  }
 
-  pinkNumber = randomGemNumber();
-  pink.on("click", function () {
+  function pinkGem() {
     currentScore = currentScore + pinkNumber;
     $("#current-score").text(currentScore);
     win();
     console.log("pink " + pinkNumber);
-  });
+  }
 
-  yellowNumber = randomGemNumber();
-  yellow.on("click", function () {
+  function yellowGem() {
     currentScore = currentScore + yellowNumber;
     $("#current-score").text(currentScore);
     win();
     console.log("yellow " + yellowNumber);
-
-  });
+  }
 
   function win() {
     if (currentScore === targetScore) {
@@ -75,11 +80,12 @@ $(document).ready(function () {
     }
   }
 
-  // function for random numbers
+  // function for random gem numbers
   function randomGemNumber() {
     return Math.floor(Math.random() * 12) + 1;
   };
 
+  // function for random target score
   function randomTargetScore() {
     return Math.floor(Math.random() * 119) + 19;
   };
@@ -96,9 +102,35 @@ $(document).ready(function () {
     $("#target-score").text(targetScore);
   };
 
-
-
-
-
-
 });
+
+
+// blue.on("click", function () {
+  //   currentScore = currentScore + blueNumber;
+  //   $("#current-score").text(currentScore);
+  //   win();
+  //   console.log("blue " + blueNumber);
+  // });
+
+  // greenNumber = randomGemNumber();
+  // green.on("click", function () {
+  //   currentScore = currentScore + greenNumber;
+  //   $("#current-score").text(currentScore);
+  //   win();
+  //   console.log("green " + greenNumber);
+  // });
+
+  // pinkNumber = randomGemNumber();
+  // pink.on("click", function () {
+  //   currentScore = currentScore + pinkNumber;
+  //   $("#current-score").text(currentScore);
+  //   win();
+  //   console.log("pink " + pinkNumber);
+  // });
+
+  // yellowNumber = randomGemNumber();
+  // yellow.on("click", function () {
+  //   currentScore = currentScore + yellowNumber;
+  //   $("#current-score").text(currentScore);
+  //   win();
+  //   console.log("yellow " + yellowNumber);
