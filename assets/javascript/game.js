@@ -14,12 +14,14 @@ $(document).ready(function () {
   var green = $("#green");
   var pink = $("#pink");
   var yellow = $("#yellow");
+  var score = $("#current-score");
+  var target = $("#target-score");
 
 
   // generate random number for target number
   targetScore = randomTargetScore();
   // and then put random number into target score div
-  $("#target-score").text(targetScore);
+  target.text(targetScore);
   console.log("target " + targetScore);
 
 
@@ -32,35 +34,36 @@ $(document).ready(function () {
   yellowNumber = randomGemNumber();
   yellow.on("click", yellowGem);
 
-
+// functions for gem number tracking
   function blueGem() {
     currentScore = currentScore + blueNumber;
-    $("#current-score").text(currentScore);
+    score.text(currentScore);
     win();
     console.log("blue " + blueNumber);
   }
 
   function greenGem() {
     currentScore = currentScore + greenNumber;
-    $("#current-score").text(currentScore);
+    score.text(currentScore);
     win();
     console.log("green " + greenNumber);
   }
 
   function pinkGem() {
     currentScore = currentScore + pinkNumber;
-    $("#current-score").text(currentScore);
+    score.text(currentScore);
     win();
     console.log("pink " + pinkNumber);
   }
 
   function yellowGem() {
     currentScore = currentScore + yellowNumber;
-    $("#current-score").text(currentScore);
+    score.text(currentScore);
     win();
     console.log("yellow " + yellowNumber);
   }
 
+  // function for win/loss tracking
   function win() {
     if (currentScore === targetScore) {
       wins++;
@@ -87,7 +90,7 @@ $(document).ready(function () {
 
   // function for random target score
   function randomTargetScore() {
-    return Math.floor(Math.random() * 119) + 19;
+    return Math.floor(Math.random() * 102) + 19;
   };
 
   // reset function
@@ -98,8 +101,8 @@ $(document).ready(function () {
     greenNumber = randomGemNumber();
     pinkNumber = randomGemNumber();
     yellowNumber = randomGemNumber();
-    $("#current-score").text(currentScore);
-    $("#target-score").text(targetScore);
+    score.text(currentScore);
+    target.text(targetScore);
   };
 
 });
