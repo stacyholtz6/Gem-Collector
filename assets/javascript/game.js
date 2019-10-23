@@ -17,6 +17,11 @@ $(document).ready(function () {
   var score = $("#current-score");
   var target = $("#target-score");
 
+  var pop = new Audio("assets/sounds/bubblePop.mp3");
+
+  $(".gemImage").on("click", function () {
+    pop.play();
+  })
 
   // generate random number for target number
   targetScore = randomTargetScore();
@@ -34,7 +39,7 @@ $(document).ready(function () {
   yellowNumber = randomGemNumber();
   yellow.on("click", yellowGem);
 
-// functions for gem number tracking
+  // functions for gem number tracking
   function blueGem() {
     currentScore = currentScore + blueNumber;
     score.text(currentScore);
@@ -59,6 +64,7 @@ $(document).ready(function () {
   function yellowGem() {
     currentScore = currentScore + yellowNumber;
     score.text(currentScore);
+
     win();
     console.log("yellow " + yellowNumber);
   }
