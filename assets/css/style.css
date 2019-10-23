@@ -21,6 +21,10 @@ body {
   margin-top: 5px;
 }
 
+.win {
+  margin-bottom: 80px;
+}
+
 .rules {
   margin: 20px;
 }
@@ -46,5 +50,6 @@ a:hover {
 }
 
 nav {
+  /* margin-top: 20px; */
   background: rgb(51, 173, 255);
 }
