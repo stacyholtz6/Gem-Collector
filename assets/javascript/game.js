@@ -69,6 +69,10 @@ $(document).ready(function () {
     console.log("yellow " + yellowNumber);
   }
 
+  function sound() {
+
+  }
+
   // function for win/loss tracking
   function win() {
     if (currentScore === targetScore) {

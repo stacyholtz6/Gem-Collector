@@ -4,11 +4,14 @@ body {
 
 .jumbotron {
   background: rgb(51, 173, 255);
+  color: rgb(227,227,227);
   padding: 20px;
+  
 }
 
 .btn-primary {
   background: rgb(51, 173, 255);
+  color: rgb(227,227,227);
 }
 
 .gemBox {
