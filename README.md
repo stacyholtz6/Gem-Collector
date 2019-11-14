@@ -56,7 +56,7 @@ FUNCTIONALITY:
 - Hover over a gem and it rotates so you know which gem you are selecting
 - Sound plays when you click a gem. POP!!
 ```
-![Gems](assets/imgaes/gems.gif)
+![Gems](assets/images/gems.gif)
 
 ###### Game over alerts
 ```
