@@ -1,4 +1,4 @@
-# unit-4-game / Gem Collector
+# Gem Collector
 
 ### Link to Live Game:
 [Gem Collector](https://stacyholtz6.github.io/Gem-Collector/)
