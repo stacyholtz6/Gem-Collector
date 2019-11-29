@@ -1,7 +1,7 @@
 # unit-4-game / Gem Collector
 
 ### Link to Live Game:
-[Unit-4-Game](https://stacyholtz6.github.io/unit-4-game/)
+[Gem Collector](https://stacyholtz6.github.io/Gem-Collector/)
 
 ## Game Objective:
 ```
